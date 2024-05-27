@@ -90,7 +90,7 @@ const ExpenseSlider = ({localExpenseList, updateExpenseList, aggregatedData}) =>
    }
  
    
-   if(!localExpenseList)  return ( <div>not rendered </div> ) 
+   if(!localExpenseList)  return ( <div> </div> ) 
     else return  (
         <div>
             
