@@ -1,0 +1,66 @@
+.chart-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  
+  box-sizing: border-box;
+}
+
+
+
+.chart-wrapper {
+  display: flex; 
+  flex-direction: column;/* Add flex to place chart and legend side by side */
+  width: 80%;
+  max-width: 300px;
+  margin: 20px 0;
+}
+
+.chart {
+  flex: 1;
+  width: 80%;
+  max-width: 250px;
+}
+
+.custom-legend {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  justify-content: space-between;
+  margin: 10px; /* Space between chart and legend */
+}
+
+.legend-item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 8px;
+ 
+}
+
+.legend-color {
+  width: 18px;
+  height: 8px;
+ 
+  display: inline-block;
+  margin-left: 8px;
+  margin-right: 4px;
+}
+
+.legend-label {
+ 
+  color: white
+}
+
+@media (max-width: 768px) {
+  .chart-wrapper {
+    flex-direction: column; /* Stack chart and legend vertically on smaller screens */
+    align-items: center;
+  }
+
+  .custom-legend {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+}

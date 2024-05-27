@@ -1,0 +1,256 @@
+.expense-tracker-app{
+    text-align: center;
+    padding: 0px 10px;
+    
+    background-color: rgb(58, 56, 56);
+    
+
+  }
+.bar-chart-container {
+    flex: 1; /* Take up 1/3 of the width */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+.bar-chart-canvas {
+    width: 90%;
+    background-color: white;
+   
+    margin:0px 20px;
+    border-radius: 30px;
+    
+}
+
+
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+
+.expense-list {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    padding: 10px;
+    margin: 0;
+    list-style: none;
+    
+    border-radius: 30px;
+    background-color: rgb(236, 232, 232);
+}
+
+.bar-chart-component {
+    flex: 1; /* Take up 1/3 of the width */
+}
+
+.expense-item {
+    display: flex;
+    justify-content: space-between;
+    padding:0px 40px;
+    border-bottom: 1px solid #ddd;
+    
+}
+.expenseList > h1{
+    color: white;
+    text-align: start;
+}
+.bar-chart-container > h1{
+    color:white;
+    text-align: start;
+  
+}
+
+.expense-item > div {
+    flex: 1;
+    text-align: center;
+    text-overflow: ellipsis;
+    padding: 10px;
+    
+    
+}
+
+.expense-list {
+    list-style: none; /* Remove list symbols */
+    padding: 0;
+    margin: 0;
+}
+
+.expense-sublist2{
+    display:flex;
+    flex-direction: column;
+    align-items: start;
+    flex-wrap: wrap;
+    font-weight: bold;
+}
+.expense-sublist3{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+
+
+
+/* Modal Overlay Styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modal Content Styles */
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+}
+
+/* Close Button Styles */
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: red;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .content-container {
+        flex-direction: column; /* Switch back to vertical layout on smaller screens */
+        height: auto; /* Remove fixed height */
+    }
+
+    .expense-list-container {
+        flex: auto; /* Take up available space */
+        margin-right: 0; /* Remove margin */
+        margin-bottom: 20px; /* Add some spacing between components */
+    }
+
+    .bar-chart-component {
+        flex: auto; /* Take up available space */
+    }
+}
+
+.EditBlock {
+    width: 600px; /* Adjust width as needed */
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto; /* Center horizontally */
+}
+
+.EditBlock input[type="text"],
+.EditBlock input[type="number"],
+.EditBlock input[type="date"],
+.EditBlock button {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.EditBlock input[type="text"],
+.EditBlock input[type="number"],
+.EditBlock input[type="date"] {
+    margin-bottom: 10px;
+}
+
+.EditBlock button {
+    background-color: #007bff;
+    color: #7a6969;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.EditBlock button[type='submit'] {
+    background-color: #50a954; /* Green color for submit button */
+}
+
+.EditBlock button[type='button'] {
+    background-color: #cd606b; /* Red color for close button */
+}
+
+.EditBlock button[type='submit'],
+.EditBlock button[type='button'] {
+    width: 48%; /* Adjust button width */
+}
+
+.EditBlock button[type='submit']:hover,
+.EditBlock button[type='button']:hover {
+    opacity: 0.8;
+}
+
+
+
+
+.edit-button,
+.delete-button {
+    padding: 5px;
+    margin:5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.edit-button {
+    background-color: #007bff; /* Blue color for edit button */
+    color: #fff;
+}
+
+.delete-button {
+    background-color: #dc3545; /* Red color for delete button */
+    color: #fff;
+}
+/* Large screens */
+@media (min-width: 768px) {
+    .content-container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .expenseList {
+        flex: 2;
+    }
+
+    .bar-chart-component {
+        flex: 1;
+        margin-left: 20px;
+    }
+}
+
+/* Small screens */
+@media (max-width: 767px) {
+    .expenseList {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .bar-chart-component {
+        width: 100%;
+    }
+}

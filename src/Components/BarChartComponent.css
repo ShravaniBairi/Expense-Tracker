@@ -1,0 +1,20 @@
+/* CSS for Horizontal Bar Chart */
+.bar-chart-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    margin-bottom: 20px; /* Add margin to separate from the list */
+}
+
+/* Adjust chart canvas size */
+.bar-chart-canvas {
+    background-color: white;
+    width: 80%; /* Adjust the width as needed */
+    height: 300px; /* Set a fixed height or adjust as needed */
+   
+}
+.bar-chart-canvas .chartjs-render-monitor {
+    border-top-right-radius: 100px; /* Adjust the radius value as needed */
+  }
